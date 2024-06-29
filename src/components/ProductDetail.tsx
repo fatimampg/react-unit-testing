@@ -20,7 +20,7 @@ const ProductDetail = ({ productId }: { productId: number }) => {
       .then((data) => setProduct(data))
       .catch((err) => setError((err as Error).message))
       .finally(() => setLoading(false));
-  }, []);
+  }, [productId]);
 
   if (isLoading) return <div>Loading...</div>;
 
